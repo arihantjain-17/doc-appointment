@@ -1,0 +1,53 @@
+
+
+.sidebarcontainer{
+  height: 100vh;
+  transition: width 0.3s ease;
+  background-color: bisque;
+}
+
+
+
+.sidebar.open{
+  display: block;
+  margin-right: 20px;
+}
+
+.sidebar.close{
+  display:  none;
+}
+
+.toggle-btn {
+  margin: 10px;
+   
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+.sidebar h2 {
+  text-align: center;
+  
+  
+}
+
+
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #49a97b; 
+  font-size: 20px;
+}
+
+.sidebar ul li a:hover {
+  color: #007bff;
+}
+.sidebar ul{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+  
+}
