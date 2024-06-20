@@ -1,19 +1,23 @@
+* {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-sizing: content-box;
 
+}
 .container{
     height: 100vh;
-    width: 10%;
+    /* width: 20%; */
+    display: flex;
 }
 
-
-
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: -150px;
-    width: 200px;
-    height: 100%;
-    background: #4f82b6;
-    padding: 20px;
+    min-width: 150px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    color: #2a7c87;
+    margin: 15px;
+    padding: 0px 10px;
     transition: left 0.3s ease;
     box-shadow: 2px 0 5px rgba(0,0,0,0.5);
   }
@@ -38,21 +42,33 @@
   }
   
   .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 40px;
+    display: flexbox;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      list-style-type: none;
+      padding: 0;
   }
   
-  .sidebar ul li {
-    margin: 20px 0;
-  }
-  
-  .sidebar ul li a {
+  .sidebar>ul>li {
+    font-size: larger;
+    margin-bottom: 10px;
     text-decoration: none;
-    color: #333;
+    color: #2a7c87;
+    font-weight: bold;
   }
   
-  .sidebar ul li a:hover {
-    color: #007bff;
+  .sidebar ul li a{
+    text-decoration: none;
+      color: #2a7c87;
+      font-weight: bold;
+  }
+  
+  .sidebar>ul :hover {
+    color: #2a7c87;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
   }
   

@@ -1,9 +1,12 @@
 import Slidebar from "../components/Landingpage/Slidebar";
+import SearchBar from "../components/Landingpage/SearchBar";
 
 const Landingpage = () => {
   return (
     <div>
-        <Slidebar></Slidebar>
+    {/* <SearchBar></SearchBar> */}
+    <Slidebar></Slidebar>
+      
     </div>
   )
 }
