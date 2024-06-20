@@ -1,0 +1,6 @@
+.cards {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Ensures the cards wrap to the next line if they overflow */
+    justify-content: space-between; /* Adjusts spacing between cards */
+}

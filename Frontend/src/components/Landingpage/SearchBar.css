@@ -1,22 +1,29 @@
-.container{
+*{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .search-container{
-    width: 200px;
     display: flex;
     flex-direction: column;
 }
 
+#searchInput {
+    width: 180px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 20px;
+   
+}
+
 .dropdown{
-    background-color: white;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
-    border: 1px solid grey;
+    border: 1px solid black;
+    width: 185px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
 }
 
 .dropdown-empty{
@@ -26,13 +33,17 @@
 .dropdown-row{
     cursor: pointer;
     text-align: start;
-    margin: 20px 0;
+    margin: 5px ;
+    border-radius: 10px;
 }
 
-input{
-    width: 220px;
+.dropdown-row:hover{
+    background-color: white;
 }
+
+
 
 .search-inner{
     display: flex;
 }
+

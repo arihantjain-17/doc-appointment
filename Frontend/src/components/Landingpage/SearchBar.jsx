@@ -1,4 +1,6 @@
 import React, { useState,useEffect } from 'react'
+import './SearchBar.css'
+
 var data;//require data
 
 function SearchBar() {
@@ -26,51 +28,25 @@ function SearchBar() {
   
 
   return (
-    <div className='container'>
-      <h1>Search</h1>
       <div className="Search-container">
-        Searchbar
         <div className="search-inner">
-          <input type="text" value={value} onChange={onChange} />
+          <input id="searchInput" type="text" value={value} onChange={onChange} placeholder='Search'/>
           <button onClick={()=> onSearch(value)}>Search</button>
         </div>
-        {/* <div className="dropdown">
-        {data.filter(item => {
-          const searchTerm = value.toLowerCase();
-          const fullName = item.full_name.toLowerCase();
+        <div className="dropdown">
+          {data.filter(item => {
+            const searchTerm = value.toLowerCase();
+            const fullName = item.title.toLowerCase();
 
-          return searchTerm && fullName.startsWith(searchTerm) && fullName !== searchTerm;
-        }).slice(0,10)
-          .map((item) => <div onClick={()=>(item.full_name)} className='dropdown-row'>
-          {item.full_name} key={item.id}
-        </div>)}
+            return searchTerm && fullName.startsWith(searchTerm) && fullName !== searchTerm;
+          }).slice(0,10)
+            .map((item) => 
+            <div onClick={()=>(item.id)} className='dropdown-row'>
+              {item.title}
+            </div>)}
         </div>
-      </div> */}
-      <div className="dropdown">
-  {data.filter((item) => {
-      const searchTerm = value.toLowerCase();
-      const fullName = item.title.toLowerCase(); // Adjusted to use the correct property 'title'
-
-      return (
-        searchTerm &&
-        fullName.startsWith(searchTerm) &&
-        fullName !== searchTerm
-      );
-    })
-    .slice(0, 10)
-    .map((item) => (
-      <div
-        key={item.id} // Place the key prop directly on the outermost element
-        onClick={() => onSearch(item.title)} // Corrected the onClick function to call onSearch
-        className="dropdown-row"
-      >
-        {item.title}
       </div>
-    ))}
-</div>
-</div>
       
-    </div>
   )
 }
 

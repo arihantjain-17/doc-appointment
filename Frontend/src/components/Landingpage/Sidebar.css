@@ -1,0 +1,102 @@
+* {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-sizing: content-box;
+}
+
+.sidebarcontainer{
+  height: 100vh;
+  /* transition: width 0.3s ease; */
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar{
+  transition: width 1s ease;
+}
+
+.sidebar.open{
+  height: 100vh;
+  /* min-width: 150px; */
+  width: 175px;;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  color: #2a7c87;
+  margin: 15px;
+  padding: 0px 10px;
+  transition: width 1s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.close {
+  color: transparent;
+  content: hidden;
+  width: 45px;
+  height: 100vh;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  margin: 15px;
+  padding: 0px 10px;
+  transition: width 1s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.open a{
+  color:#2a7c87;
+  transition: color 2.5s ease;
+}
+.sidebar.close a{
+  color: transparent;
+  transition: color 0.5s ease;
+}
+
+
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #2a7c87;
+  font-weight: bold;
+}
+
+.sidebar ul :hover {
+  color: #2a7c87;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sidebar ul{
+  display: flexbox;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+ .sidebar ul li {
+  font-size: larger;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #2a7c87;
+  font-weight: bold;
+ }
+
+
