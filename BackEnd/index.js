@@ -13,9 +13,9 @@ app.listen(3000, ()=>{
 
 
 mongoose.connect('mongodb://localhost:27017/your-database-name', {
-    // Remove these options
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true
+  name: { type: String, required: true },
+  specialty: { type: String, required: true },
+  availability: { type: [Date], required: true },
   })
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err));
