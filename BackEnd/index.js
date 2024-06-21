@@ -11,6 +11,10 @@ app.listen(3000, ()=>{
     console.log("server is running on 3000")
 })
 
+app.get("/", ()=>{
+  console.log("hi from get route")
+})
+
 
 mongoose.connect('mongodb://localhost:27017/your-database-name', {
   name: { type: String, required: true },
