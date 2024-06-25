@@ -8,6 +8,8 @@
   /* transition: width 0.3s ease; */
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
 }
 
 .sidebar{
@@ -31,7 +33,6 @@
 
 .sidebar.close {
   color: transparent;
-  content: hidden;
   width: 45px;
   height: 100vh;
   border-radius: 10px;
@@ -44,29 +45,49 @@
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.sidebar.open a{
-  color:#2a7c87;
-  transition: color 2.5s ease;
+h2{
+  margin-bottom: 20px;
 }
-.sidebar.close a{
-  color: transparent;
-  transition: color 0.5s ease;
+.sidebar.close h2{
+  display: none;
+}
+
+
+.sidebar.open .icons{
+  display: none;
+  /* transform: display 5s; */
+}
+
+.sidebar.close .icons{
+  display: flex;
+  
+  justify-content: center;
+}
+
+.sidebar.close .Menu{
+  display: none;
 }
 
 
 .toggle-btn {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  padding: 10px 20px;
+  color:#2a7c87;
+  margin-top: 20px;
   font-size: 16px;
   cursor: pointer;
   z-index: 1000;
 }
 
+.toggle-btn :hover{
+  color: white;
+  background-color: #2a7c87;
+  transition: color 1s;
+  transition: background-color 1s;
+  border-radius: 5px;
+}
+
 .sidebar h2 {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .sidebar ul li a {
@@ -75,9 +96,10 @@
   font-weight: bold;
 }
 
-.sidebar ul :hover {
+.sidebar ul li:hover {
   color: #2a7c87;
   background-color: rgb(255, 255, 255);
+  transition: background-color 0.5s;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -93,10 +115,12 @@
 
  .sidebar ul li {
   font-size: larger;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-decoration: none;
   color: #2a7c87;
   font-weight: bold;
  }
+
+
 
 

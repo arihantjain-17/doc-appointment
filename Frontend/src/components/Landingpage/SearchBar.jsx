@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import './SearchBar.css'
+import { FaSearch } from "react-icons/fa";
 
 var data;//require data
 
@@ -31,7 +32,8 @@ function SearchBar() {
       <div className="Search-container">
         <div className="search-inner">
           <input id="searchInput" type="text" value={value} onChange={onChange} placeholder='Search'/>
-          <button onClick={()=> onSearch(value)}>Search</button>
+          <button onClick={()=> onSearch(value)}><FaSearch size={20}/></button>
+          
         </div>
         <div className="dropdown">
           {data.filter(item => {
