@@ -3,11 +3,8 @@ import SearchBar from "../components/Landingpage/SearchBar.jsx";
 import Doctor from "../components/Landingpage/Doctor.jsx";
 
 import "./Landingpage.css"
-const doctors = [
-  { name: 'Dr. John Doe', specialty: 'Cardiologist', image: '' },
-  { name: 'Dr. Jane Smith', specialty: 'Dermatologist', image: '' },
-  { name: 'Dr. Sarah Johnson', specialty: 'Pediatrician', image: '' },
-];
+import doctors from '../data/Doctordata'
+
 
 const Landingpage = () => {
   return (
@@ -24,7 +21,7 @@ const Landingpage = () => {
 
                     <div className="heading">
                       <h2>Doc appoinment</h2>
-                      {/* searchabar */}
+                      
                     </div>
 
 

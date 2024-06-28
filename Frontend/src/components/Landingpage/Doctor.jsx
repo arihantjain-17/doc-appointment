@@ -1,23 +1,16 @@
-import DocCard from "./DocCard";
+
+import DocCard from './DocCard';
+import './Doctor.css';
 
 
-import "./Doctor.css"
-
-
-const Doctor = ({doctors}) => {
+const Doctor = ({ doctors }) => {
   return (
     <div className="cards">
-       {
-         doctors.map((doctor,id) => {
-                return <DocCard key={id} {...doctor}/>
-
-       })
-               
-        }
+      {doctors.map((doctor) => (
+        <DocCard key={doctor.id} {...doctor} />
+      ))}
     </div>
-  )
-}
-
-
+  );
+};
 
 export default Doctor;
