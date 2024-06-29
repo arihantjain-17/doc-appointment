@@ -1,10 +1,12 @@
-const doctors = [
+import docimage from '../assets/docimage.jpg'; 
+
+const doctors = [//card k data hai
     {
       id: 1,
       name: 'Dr. John Doe',
       specialty: 'Cardiologist',
       fees: 200,
-      image: 'link_to_image',
+      image:docimage,      
       availability: true,
       hospital: 'City Hospital'
     },
@@ -13,7 +15,7 @@ const doctors = [
       name: 'Dr. Jane Smith',
       specialty: 'Dermatologist',
       fees: 150,
-      image: 'link_to_image',
+      image: docimage,
       availability: false,
       hospital: 'Health Clinic'
     },
@@ -22,7 +24,7 @@ const doctors = [
       name: 'Dr. Sarah Johnson',
       specialty: 'Pediatrician',
       fees: 180,
-      image: 'link_to_image',
+      image: docimage,
       availability: true,
       hospital: 'Children\'s Hospital'
     },

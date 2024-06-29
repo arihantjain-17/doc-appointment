@@ -1,10 +1,12 @@
+import docimage from '../assets/docimage.jpg'; 
+
 const doctors = [
-    {
+    {//doc page k data hai
       id: 1,
       name: 'Dr. John Doe',
       specialty: 'Cardiologist',
       fees: 200,
-      image: 'https://example.com/image1.jpg',
+      image: docimage,
       availability: true,
       hospital: 'City Hospital',
       qualifications: 'MD, PhD in Cardiology',
@@ -16,7 +18,7 @@ const doctors = [
       name: 'Dr. Jane Smith',
       specialty: 'Dermatologist',
       fees: 150,
-      image: 'https://example.com/image2.jpg',
+      image: docimage,
       availability: false,
       hospital: 'General Hospital',
       qualifications: 'MD in Dermatology',
@@ -28,7 +30,7 @@ const doctors = [
       name: 'Dr. Sarah Johnson',
       specialty: 'Pediatrician',
       fees: 180,
-      image: 'https://example.com/image3.jpg',
+      image: docimage,
       availability: true,
       hospital: 'Children’s Hospital',
       qualifications: 'MD in Pediatrics',

@@ -19,13 +19,20 @@ const Docpage = () => {
       </div>
       <div className="doctor-info-container">
         <h1 className="doctor-detail-name">{doctor.name}</h1>
+        <p className="doctor-detail-description">{doctor.description}</p>
         <p className="doctor-detail-specialty">Specialty: {doctor.specialty}</p>
         <p className="doctor-detail-fees">Consultation Fees: ${doctor.fees}</p>
         <p className="doctor-detail-availability">Availability: {doctor.availability ? 'Available' : 'Not Available'}</p>
         <p className="doctor-detail-hospital">Hospital: {doctor.hospital}</p>
         <p className="doctor-detail-qualifications">Qualifications: {doctor.qualifications}</p>
         <p className="doctor-detail-awards">Awards: {doctor.awards}</p>
-        <p className="doctor-detail-description">{doctor.description}</p>
+        
+      </div>
+      <div className="doctor-appointment-container">
+        <label htmlFor="">Appointment</label>
+        <input type="date" />
+        <input type="button" value="book appointment"/>
+        
       </div>
     </div>
   );
