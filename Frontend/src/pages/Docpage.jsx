@@ -1,8 +1,10 @@
 
 import { useParams } from 'react-router-dom';
-import doctors from '../data/Doctordata'; 
+import doctors from '../data/Docdetail'; 
 
-const DocPage = () => {
+import './Docpage.css'; 
+
+const Docpage = () => {
   const { id } = useParams();
   const doctor = doctors.find(doc => doc.id === parseInt(id));
 
@@ -11,15 +13,22 @@ const DocPage = () => {
   }
 
   return (
-    <div>
-      <h1>{doctor.name}</h1>
-      <img src={doctor.image} alt={doctor.name} />
-      <p>Specialty: {doctor.specialty}</p>
-      <p>Fees: ${doctor.fees}</p>
-      <p>Availability: {doctor.availability ? 'Available' : 'Not Available'}</p>
-      <p>Hospital: {doctor.hospital}</p>
+    <div className="doctor-detail-container">
+      <div className="doctor-image-container">
+        <img src={doctor.image} alt={doctor.name} className="doctor-detail-image" />
+      </div>
+      <div className="doctor-info-container">
+        <h1 className="doctor-detail-name">{doctor.name}</h1>
+        <p className="doctor-detail-specialty">Specialty: {doctor.specialty}</p>
+        <p className="doctor-detail-fees">Consultation Fees: ${doctor.fees}</p>
+        <p className="doctor-detail-availability">Availability: {doctor.availability ? 'Available' : 'Not Available'}</p>
+        <p className="doctor-detail-hospital">Hospital: {doctor.hospital}</p>
+        <p className="doctor-detail-qualifications">Qualifications: {doctor.qualifications}</p>
+        <p className="doctor-detail-awards">Awards: {doctor.awards}</p>
+        <p className="doctor-detail-description">{doctor.description}</p>
+      </div>
     </div>
   );
 };
 
-export default DocPage;
+export default Docpage;

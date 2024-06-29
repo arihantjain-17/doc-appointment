@@ -1,0 +1,53 @@
+/* DocPage.css */
+.doctor-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .doctor-image-container {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .doctor-detail-image {
+    width: 50%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .doctor-info-container {
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .doctor-detail-name {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .doctor-detail-specialty,
+  .doctor-detail-fees,
+  .doctor-detail-availability,
+  .doctor-detail-hospital,
+  .doctor-detail-qualifications,
+  .doctor-detail-awards,
+  .doctor-detail-description {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+  
+  .doctor-detail-description {
+    margin-top: 20px;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
