@@ -24,7 +24,7 @@
   background-color: transparent;
   border: 2px solid rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
-  color: #2a7c87;
+  color: #000000;
   margin: 15px;
   padding: 0px 10px;
   transition: width 1s ease;
@@ -70,7 +70,7 @@ h2{
 
 
 .toggle-btn {
-  color:#2a7c87;
+  color:#000000;
   margin-top: 20px;
   font-size: 16px;
   cursor: pointer;
@@ -78,10 +78,10 @@ h2{
 }
 
 .toggle-btn :hover{
-  color: white;
-  background-color: #2a7c87;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
   transition: color 1s;
-  transition: background-color 1s;
+  transition: background-color 0.5s;
   border-radius: 5px;
 }
 
@@ -92,12 +92,12 @@ h2{
 
 .sidebar ul li a {
   text-decoration: none;
-  color: #2a7c87;
+  color: #000000;
   font-weight: bold;
 }
 
 .sidebar ul li:hover {
-  color: #2a7c87;
+  color: #000000;
   background-color: rgb(255, 255, 255);
   transition: background-color 0.5s;
   border-radius: 5px;
@@ -119,6 +119,8 @@ h2{
   text-decoration: none;
   color: #2a7c87;
   font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 8px;
  }
 
 

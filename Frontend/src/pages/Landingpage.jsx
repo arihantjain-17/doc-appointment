@@ -1,19 +1,35 @@
 import Sidebar from "../components/Landingpage/Sidebar.jsx";
 import SearchBar from "../components/Landingpage/SearchBar.jsx";
 import Doctor from "../components/Landingpage/Doctor.jsx";
+import Navbar from "../components/Landingpage/Navbar.jsx"
 
 import "./Landingpage.css"
 import doctors from '../data/Doctordata'
 
+import * as React from 'react';
+import * as ReactDOM from 'react-dom/client';
+
+
+import { useState } from "react";
+
 
 const Landingpage = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="home">
+        <div className="landing-page-NavBar ">
+          <Navbar toggleSidebar={toggleSidebar}></Navbar>
+        </div>
         <div className="home-container">
 
         
               <div className="sidebar-container">
-                <Sidebar></Sidebar>
+                <Sidebar isOpen={isSidebarOpen}></Sidebar>
               </div>
               
               
@@ -31,7 +47,7 @@ const Landingpage = () => {
                     </div>
               </div>
 
-              <div className="searchBar"><SearchBar></SearchBar></div>
+              {/* <div className="searchBar"><SearchBar></SearchBar></div> */}
         </div>
 
          

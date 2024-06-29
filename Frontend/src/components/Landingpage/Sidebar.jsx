@@ -8,8 +8,8 @@ import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 
 
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+const Sidebar = ({ isOpen }) => {
+  // const [isOpen, setIsOpen] = useState(true);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -21,9 +21,8 @@ const Sidebar = () => {
 
 
               <div  className={`sidebar ${isOpen ? 'open' : 'close'}`}>
-                  <button className="toggle-btn" onClick={toggleSidebar}>
-                  {isOpen ? <CiCircleMinus size={40}/> : <CiCirclePlus size={40}/>}
-              </button>
+                  
+              
                   <div>
                     <h2>Menu</h2>
                   </div>

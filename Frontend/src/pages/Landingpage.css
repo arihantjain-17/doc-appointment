@@ -3,11 +3,14 @@
     width: 100vw;
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    margin-top: 32px;
 }
 
-.sideBar-container{
-    height:100vh;
+
+.landing-page-navbar{
+    background-color: transparent;
 }
 
 .home-container{
@@ -15,17 +18,22 @@
     flex-direction: row;
     width: 100%;
     height: 100%;
-   justify-content: space-between;
+   /* justify-content:safe; */
+}
+
+.sideBar-container {
+    height: 100vh;
 }
 
 .main-container{
+    margin-left: 15%;
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
-.searchBar{
+/* .searchBar{
     margin: 20px;
-}
+} */
 
 

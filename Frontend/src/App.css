@@ -1,9 +1,14 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgba(0, 255, 255, 0.451);
-    background: url(\img.jpg) no-repeat;
     
-    background-size: cover;
+    /* background: url(\img.jpg) no-repeat;  */
+    background-color: rgb(5, 242, 242);
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(23,
+        197,
+        209,0.5)),
+        url('\img.jpg');
+      background-size: cover;
+      background-blend-mode: darken;
   }
   

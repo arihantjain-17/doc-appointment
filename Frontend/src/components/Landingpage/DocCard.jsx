@@ -13,6 +13,7 @@ const DocCard = ({ id, name, specialty, fees, image, availability, hospital }) =
         <p className="doctor-availability">Availability: {availability ? 'Available' : 'Not Available'}</p>
         <p className="doctor-hospital">Hospital: {hospital}</p>
       </div>
+      
     </Link>
   );
 };
