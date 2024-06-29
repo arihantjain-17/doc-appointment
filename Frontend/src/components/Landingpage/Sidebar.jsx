@@ -1,6 +1,5 @@
 import  { useState } from 'react';
 import './Sidebar.css';
-import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdHome } from "react-icons/io";
 import { FaUserDoctor } from "react-icons/fa6";
 import { CiCalendarDate } from "react-icons/ci";
