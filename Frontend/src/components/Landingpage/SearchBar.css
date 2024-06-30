@@ -16,18 +16,20 @@
    
 }
 
-.dropdown{
+
+
+.dropdown-empty{
+    border: none;
+}
+
+.dropdown {
     background-color: transparent;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
     width: 185px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(100px);
     border-radius: 10px;
-}
-
-.dropdown-empty{
-    border: none;
 }
 
 .dropdown-row{

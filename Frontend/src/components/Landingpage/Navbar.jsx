@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState,useEffect } from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -59,6 +60,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function PrimarySearchAppBar({ toggleSidebar }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [value, setValue] = useState('');
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos')
+      .then((response) => response.json())
+      .then((json) => setData(json))
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -79,6 +89,16 @@ export default function PrimarySearchAppBar({ toggleSidebar }) {
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
+
+  const onChange = (e) => {
+    setValue(e.target.value);
+  };
+
+  const onSearch = (searchTerm) => {
+    setValue(searchTerm);
+    // Our API to fetch the search results
+    console.log('search ', searchTerm);
+  };  
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
@@ -155,7 +175,8 @@ export default function PrimarySearchAppBar({ toggleSidebar }) {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }} >
+    <Box sx={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",position:"fixed"}}>
+    <Box sx={{ flexGrow: 1 ,minWidth:"100vw"}} >
       <AppBar position="static" 
       sx={{
         backgroundColor:"#17c5d1",
@@ -190,6 +211,8 @@ export default function PrimarySearchAppBar({ toggleSidebar }) {
                 <StyledInputBase
                 placeholder="Search…"
                 inputProps={{ 'aria-label': 'search' }}
+                value={value}
+                onChange={onChange}
                 />
             </Search>
           </Box>
@@ -234,9 +257,27 @@ export default function PrimarySearchAppBar({ toggleSidebar }) {
             </IconButton>
           </Box>
         </Toolbar>
+        
       </AppBar>
+      
       {renderMobileMenu}
       {renderMenu}
+      
+    </Box>
+    <Box sx={{position:'relative'}}>
+      <div className="dropdown">
+            {data.filter(item => {
+              const searchTerm = value.toLowerCase();
+              const fullName = item.title.toLowerCase();
+
+              return searchTerm && fullName.startsWith(searchTerm) && fullName !== searchTerm;
+            }).slice(0, 10)
+              .map((item) =>
+                <div key={item.id} onClick={() => onSearch(item.title)} className='dropdown-row'>
+                  {item.title}
+                </div>)}
+          </div>
+    </Box>
     </Box>
   );
 }
