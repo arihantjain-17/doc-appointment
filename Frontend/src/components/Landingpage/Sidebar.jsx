@@ -4,8 +4,7 @@ import { IoMdHome } from "react-icons/io";
 import { FaUserDoctor } from "react-icons/fa6";
 import { CiCalendarDate } from "react-icons/ci";
 import { MdPhone } from "react-icons/md";
-import { CiCirclePlus } from "react-icons/ci";
-import { CiCircleMinus } from "react-icons/ci";
+
 
 
 const Sidebar = ({ isOpen }) => {

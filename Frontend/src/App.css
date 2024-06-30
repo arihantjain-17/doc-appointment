@@ -9,6 +9,6 @@ body {
         209,0.5)),
         url('\img.jpg');
       background-size: cover;
-      background-blend-mode: darken;
+      /* background-blend-mode: darken; */
   }
   

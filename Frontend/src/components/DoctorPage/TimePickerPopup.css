@@ -1,0 +1,48 @@
+.time-picker-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.time-picker-popup h3 {
+    margin: 0 0 1rem;
+    text-align: center;
+}
+
+.time-picker-popup select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.time-picker-popup button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0.5rem;
+}
+
+.time-picker-popup button:hover {
+    background-color: #0056b3;
+}
+
+.time-picker-popup button:nth-child(2) {
+    background-color: #6c757d;
+}
+
+.time-picker-popup button:nth-child(2):hover {
+    background-color: #5a6268;
+}
