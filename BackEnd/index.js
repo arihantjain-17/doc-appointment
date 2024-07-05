@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost:27017/doctor-appointment', { useNewUrlPars
 
 app.get("/doctor", async (req, res) => {
     console.log("hello from the doctor's project");
-    const doc = await Doctor.findOne({ Name: "Jhonny" });
+    const doc = await Doctor.find();
     if(!doc){
         res.send(403).json({ message : 'this doctor does not exit'})
     }

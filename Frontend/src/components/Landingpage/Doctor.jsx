@@ -6,9 +6,13 @@ import './Doctor.css';
 const Doctor = ({ doctors }) => {
   return (
     <div className="cards">
-      {doctors.map((doctor) => (
-        <DocCard key={doctor.id} {...doctor} />
-      ))}
+      {doctors.length > 0 ? (
+              doctors.map((doctor, index) => (
+                <DocCard key={index} doctor={doctor} />
+              ))
+            ) : (
+              <p>Loading doctors...</p>
+            )}
     </div>
   );
 };
