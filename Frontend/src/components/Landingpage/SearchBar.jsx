@@ -10,12 +10,12 @@ function SearchBar() {
   const [data, setData] = useState([]);
 
   // Fetch data on component mount
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/todos')
-      .then((response) => response.json())
-      .then((json) => setData(json))
-      .catch((error) => console.error('Error fetching data:', error));
-  }, []);
+  // useEffect(() => {
+  //   fetch('https://jsonplaceholder.typicode.com/todos')
+  //     .then((response) => response.json())
+  //     .then((json) => setData(json))
+  //     .catch((error) => console.error('Error fetching data:', error));
+  // }, []);
 
   const onChange = (e)=>{
     setValue(e.target.value);

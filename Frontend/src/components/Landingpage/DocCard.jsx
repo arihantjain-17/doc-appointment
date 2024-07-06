@@ -8,10 +8,12 @@ const DocCard = (doctor) => {
       <div className="doctor-card">
         <img src={doctor.doctor.ImageLink} alt={doctor.doctor.Name} className="doctor-image" />
         <h3 className="doctor-name">{doctor.doctor.Name}</h3>
-        <p className="doctor-specialty">{doctor.doctor.Specialty}</p>
-        <p className="doctor-fees">Fees: ${doctor.doctor.Fees}</p>
-        <p className="doctor-availability">Availability: {doctor.doctor.Availability ? 'Available' : 'Not Available'}</p>
-        <p className="doctor-hospital">Hospital: {doctor.doctor.Hospital}</p>
+        <div className="doctor-basic-info">
+          <p className="doctor-speciality">{doctor.doctor.Speciality}</p>
+          <p className="doctor-fees">Fees: ${doctor.doctor.Fees}</p>
+          <p className="doctor-availability">Availability: {doctor.doctor.Availibility ? 'Available' : 'Not Available'}</p>
+          <p className="doctor-hospital">Hospital: {doctor.doctor.Hospital}</p>
+        </div>
       </div>
       
     </Link>

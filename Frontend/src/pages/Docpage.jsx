@@ -59,7 +59,7 @@ const Docpage = () => {
         <div className="doctor-info-container">
           <h1 className="doctor-detail-name">{doctor.Name}</h1>
           <p className="doctor-detail-description">{doctor.Description}</p>
-          <p className="doctor-detail-specialty">Specialty: {doctor.Specialty}</p>
+          <p className="doctor-detail-specialty">Speciality: {doctor.Speciality}</p>
           <p className="doctor-detail-fees">Consultation Fees: ${doctor.Fees}</p>
           <p className="doctor-detail-availability">Availability: {doctor.Availability ? 'Available' : 'Not Available'}</p>
           <p className="doctor-detail-hospital">Hospital: {doctor.Hospital}</p>

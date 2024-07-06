@@ -1,4 +1,12 @@
 /* DocPage.css */
+
+.doctor-page-container{
+  margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(23,197,209, 0.5)),url('\img.jpg');
+    background-size: cover;
+}
+
 .doctor-detail-container {
     
     height: 100vh;

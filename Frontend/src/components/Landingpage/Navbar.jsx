@@ -16,6 +16,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import axios from 'axios';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -63,11 +64,21 @@ export default function PrimarySearchAppBar({ toggleSidebar }) {
   const [value, setValue] = useState('');
   const [data, setData] = useState([]);
 
+  const getDoc = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/doctor", {});
+      setData(response.data.doctor);
+    } catch (error) {
+      console.error("Error fetching doctors:", error);
+    }
+  };
+
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/todos')
-      .then((response) => response.json())
-      .then((json) => setData(json))
-      .catch((error) => console.error('Error fetching data:', error));
+    // fetch('http://localhost:3000/doctor')
+    //   .then((response) => response.json())
+    //   .then((json) => setData(json))
+    //   .catch((error) => console.error('Error fetching data:', error));
+    getDoc();
   }, []);
 
   const isMenuOpen = Boolean(anchorEl);
@@ -96,8 +107,9 @@ export default function PrimarySearchAppBar({ toggleSidebar }) {
 
   const onSearch = (searchTerm) => {
     setValue(searchTerm);
+    
     // Our API to fetch the search results
-    console.log('search ', searchTerm);
+    // console.log('search ', searchTerm);
   };  
 
   const menuId = 'primary-search-account-menu';
@@ -268,13 +280,13 @@ export default function PrimarySearchAppBar({ toggleSidebar }) {
       <div className="dropdown">
             {data.filter(item => {
               const searchTerm = value.toLowerCase();
-              const fullName = item.title.toLowerCase();
+              const fullName = item.Name.toLowerCase();
 
               return searchTerm && fullName.startsWith(searchTerm) && fullName !== searchTerm;
             }).slice(0, 10)
               .map((item) =>
-                <div key={item.id} onClick={() => onSearch(item.title)} className='dropdown-row'>
-                  {item.title}
+                <div key={item.id} onClick={() => onSearch(item.Name)} className='dropdown-row'>
+                  {item.Name}
                 </div>)}
           </div>
     </Box>

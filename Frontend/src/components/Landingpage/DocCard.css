@@ -1,12 +1,20 @@
 .doctor-card {
-  border: 1px solid #ddd;
+  border: 2px solid #909090;
   border-radius: 12px;
   padding: 20px;
-  max-width: 320px;
+  width: 200px;
+  min-height: 280px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-style:none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  /* height: 100%; */
+  align-items: center;
+  /* padding-bottom: 25px; */
 }
 
 .doctor-card:hover {
@@ -15,44 +23,59 @@
 }
 
 .doctor-image {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .doctor-name {
   font-size: 1.6em;
   font-weight: bold;
-  color: #333;
+  color: black;
   margin: 10px 0;
+  text-decoration: none;
 }
 
-.doctor-specialty {
+.doctor-speciality {
   font-size: 1.2em;
-  color: #666;
+  color: black;
   margin: 8px 0;
+  justify-items: baseline;
 }
 
 .doctor-fees,
 .doctor-availability,
 .doctor-hospital {
   font-size: 1em;
-  color: #555;
+  color: black;
   margin: 6px 0;
+  padding:0 5px ;
 }
 
 .doctor-fees {
   font-weight: bold;
 }
 
-.doctor-availability {
-  font-weight: bold;
-  color: #4caf50; /* Green color for availability */
-}
 
 .doctor-hospital {
   font-style: italic;
-  color: #888;
+  color:black;
 }
+
+.doctor-card-link{
+  text-decoration: none;
+  margin-bottom: 50px;
+}
+
+.doctor-basic-info {
+  margin-top: auto;
+  border: 2px solid #909090;
+  border-radius: 5px;
+  justify-self: baseline;
+  
+}
+
+
+
