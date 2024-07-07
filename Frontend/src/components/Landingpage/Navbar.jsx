@@ -17,6 +17,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -24,7 +26,7 @@ const Search = styled('div')(({ theme }) => ({
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
+  }, 
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: '100%',
@@ -61,6 +63,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function PrimarySearchAppBar({ toggleSidebar }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+
   const [value, setValue] = useState('');
   const [data, setData] = useState([]);
 
@@ -253,7 +257,7 @@ export default function PrimarySearchAppBar({ toggleSidebar }) {
               onClick={handleProfileMenuOpen}
               color="inherit"
             >
-              <AccountCircle />
+              <Link to='/profile'><AccountCircle /></Link>
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -285,11 +289,13 @@ export default function PrimarySearchAppBar({ toggleSidebar }) {
               return searchTerm && fullName.startsWith(searchTerm) && fullName !== searchTerm;
             }).slice(0, 10)
               .map((item) =>
-                <div key={item.id} onClick={() => onSearch(item.Name)} className='dropdown-row'>
-                  {item.Name}
+                <div key={item._id} onClick={() => onSearch(item.Name)} className='dropdown-row'>
+                  
+                  <Link to={`/doctor/${item._id}`}>{item.Name}</Link>
                 </div>)}
           </div>
     </Box>
     </Box>
   );
 }
+ 

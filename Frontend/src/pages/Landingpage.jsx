@@ -23,7 +23,7 @@ const Landingpage = () => {
     } catch (error) {
       console.error("Error fetching doctors:", error);
     }
-  };
+  }; 
 
   useEffect(() => {
     getDoc();

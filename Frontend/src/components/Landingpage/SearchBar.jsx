@@ -19,7 +19,7 @@ function SearchBar() {
 
   const onChange = (e)=>{
     setValue(e.target.value);
-  }
+  } 
 
   const onSearch=(searchTerm)=>{
     setValue(searchTerm);
@@ -53,3 +53,4 @@ function SearchBar() {
 }
 
 export default SearchBar
+ 

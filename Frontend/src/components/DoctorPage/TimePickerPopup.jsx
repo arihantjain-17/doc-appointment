@@ -12,7 +12,7 @@ const TimePickerPopup = ({ selectedDate, onClose }) => {
 
   const handleSave = () => {
     // Save the selected time and pass it back to the Calendar component
-    onClose(selectedTime);
+    onClose(selectedTime); 
   };
 
   const getTimeOptions = () => {

@@ -8,7 +8,7 @@ const app = express()
 
 app.use(cors());
 app.use(express.json());
-app.use("/doctor", doctorRoute);
+app.use("/doctor", doctorRoute); 
 
 mongoose.connect('mongodb://localhost:27017/doctor-appointment', { useNewUrlParser: true, useUnifiedTopology: true, dbName: "doctor-appointment" })
     .then(() => console.log('MongoDB Connected'))
@@ -24,7 +24,7 @@ app.get("/doctor", async (req, res) => {
         message: 'Doctor found successfully',
         doctor: doc
     });
-    console.log(doc);
+    
 });
 
 app.listen(3000, () => {

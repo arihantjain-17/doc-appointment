@@ -10,7 +10,7 @@ const CalendarBody = ({ currentDate, onDateClick, selectedDate }) => {
 
   const rows = [];
   let days = [];
-  let day = startDate;
+  let day = startDate; 
 
   const dayLabels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 

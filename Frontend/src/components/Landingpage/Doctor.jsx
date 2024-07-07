@@ -14,7 +14,7 @@ const Doctor = ({ doctors }) => {
               <p>Loading doctors...</p>
             )}
     </div>
-  );
+  ); 
 };
 
 export default Doctor;

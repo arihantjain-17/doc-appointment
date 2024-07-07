@@ -1,0 +1,37 @@
+.user-profile {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .profile-header {
+    text-align: center;
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-details {
+    margin-top: 20px;
+  }
+  
+  .profile-details h2 {
+    margin-top: 20px;
+  }
+  
+  .profile-details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .profile-details li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  

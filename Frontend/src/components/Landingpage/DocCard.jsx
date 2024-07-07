@@ -17,7 +17,7 @@ const DocCard = (doctor) => {
       </div>
       
     </Link>
-  );
+  ); 
 };
 
 export default DocCard;

@@ -10,9 +10,9 @@ import { MdPhone } from "react-icons/md";
 const Sidebar = ({ isOpen }) => {
   // const [isOpen, setIsOpen] = useState(true);
 
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
+  // const toggleSidebar = () => {
+  //   setIsOpen(!isOpen);
+  // };
 
   return (
     <>
@@ -45,7 +45,7 @@ const Sidebar = ({ isOpen }) => {
 
       </div>
     </>
-  );
+  ); 
 };
 
 export default Sidebar;
