@@ -1,0 +1,187 @@
+[33mcommit ede54d1f42754b54807dbe34a2d183f97e1afded[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: arihantjain-17 <arihantjaindec2003@gmail.com>
+Date:   Sun Jul 7 22:17:59 2024 +0530
+
+    Searchbar functioning done and userprofile page done
+
+[33mcommit a7cb2ac7e460c1acb13c2ef1c5ba3334f3a6d59e[m
+Author: Arjit-ak <kambojarjit@gmail.com>
+Date:   Sun Jul 7 02:36:14 2024 +0530
+
+    search bar or doc cards or doc page a data be se fetch horha h
+
+[33mcommit 2bdf28fc9d7a68f7420865fe71999dd9786a1c75[m
+Merge: 895971d 35d876a
+Author: Ashutosh Kasudhan <ashukasaudhan971@gmail.com>
+Date:   Fri Jul 5 23:13:57 2024 +0530
+
+    Merge pull request #6 from Ashu463/main
+    
+    Doctor data is now coming from BE
+
+[33mcommit 35d876a1a6f9996ec70b16c28d59f9b781b8c1f6[m
+Author: Ashu463 <ashukasaudhan971@gmail.com>
+Date:   Fri Jul 5 22:47:23 2024 +0530
+
+    Doctor data is now coming from BE
+
+[33mcommit 895971d69a0ddd3052ae32d6f0cbc72e59b49c6f[m
+Author: Arjit-ak <kambojarjit@gmail.com>
+Date:   Mon Jul 1 04:49:52 2024 +0530
+
+    doctor page ki css shi kri + calendar component added
+
+[33mcommit b9434349cb6a32702c6a1d47fdfd4bf6722125b6[m
+Author: Arjit-ak <kambojarjit@gmail.com>
+Date:   Sun Jun 30 15:56:35 2024 +0530
+
+    added some navbar functionality
+
+[33mcommit 4cbe001aca77dcbe1512ffcb39a25a430fb10902[m
+Merge: 7d37a3e 68ee7e6
+Author: Arjit-ak <kambojarjit@gmail.com>
+Date:   Sun Jun 30 02:04:48 2024 +0530
+
+    navbar added
+
+[33mcommit 7d37a3e455325ba8a61d433a946eeaa7a1d87520[m
+Author: Arjit-ak <kambojarjit@gmail.com>
+Date:   Sat Jun 29 19:44:52 2024 +0530
+
+    created and modified docpage.css
+
+[33mcommit 68ee7e6aa1a861ae002d796e4f37f17bd3db762b[m
+Author: arihantjain-17 <arihantjaindec2003@gmail.com>
+Date:   Sat Jun 29 14:59:06 2024 +0530
+
+    New changes to doc page
+
+[33mcommit b2b41c9c80520a83a7910fe3d482a0cb0eb56269[m
+Author: arihantjain-17 <arihantjaindec2003@gmail.com>
+Date:   Sat Jun 29 10:45:06 2024 +0530
+
+    Changes to docpage
+
+[33mcommit e404e212200bb433d174aaba731f1d65e197db30[m
+Author: arihantjain-17 <arihantjaindec2003@gmail.com>
+Date:   Fri Jun 28 22:18:15 2024 +0530
+
+    doctor page
+
+[33mcommit fdf578de54f790407d5aa11f3f56a69110a00cf8[m
+Merge: 2bf7ce2 1ce8e81
+Author: Ashutosh Kasudhan <ashukasaudhan971@gmail.com>
+Date:   Wed Jun 26 22:26:40 2024 +0530
+
+    Merge pull request #5 from Ashu463/main
+    
+    Doctor schema added and this PR meged by Ashu463
+
+[33mcommit 1ce8e8160146662dc477450fa77b83f529cea016[m
+Author: Ashu463 <ashukasaudhan971@gmail.com>
+Date:   Wed Jun 26 22:19:59 2024 +0530
+
+    doctor schema added along with dummy route
+
+[33mcommit 2bf7ce24821d5f1426e1d4e4d3391601db450043[m
+Author: Arjit-ak <kambojarjit@gmail.com>
+Date:   Tue Jun 25 18:55:56 2024 +0530
+
+    some frontend changes - added icons in sidebar and the search icon in searcbar component
+
+[33mcommit b2008441e54e42b53eb3415e3e3aebd64a1ac9f9[m
+Merge: b6b5c9a 3c71ff2
+Author: Ashutosh Kasudhan <ashukasaudhan971@gmail.com>
+Date:   Fri Jun 21 14:31:48 2024 +0530
+
+    Merge pull request #4 from Arjit2412/main
+    
+    Merging PR from Arjit
+
+[33mcommit 3c71ff24b7d52e3a391104cd028c4ca5a9638c38[m
+Merge: 76602ec b6b5c9a
+Author: Arjit2412 <132834812+Arjit2412@users.noreply.github.com>
+Date:   Fri Jun 21 14:27:18 2024 +0530
+
+    Merge pull request #1 from arihantjain-17/main
+    
+    search bar added
+
+[33mcommit b6b5c9a731aa58b272beacff1b5c9d44f85cbee0[m
+Author: Arjit-ak <kambojarjit@gmail.com>
+Date:   Fri Jun 21 14:24:00 2024 +0530
+
+    random fix deleted
+
+[33mcommit 76602ec1a73ac8d2135eda1281e6a8810543bc3f[m
+Author: Arjit-ak <kambojarjit@gmail.com>
+Date:   Fri Jun 21 14:16:39 2024 +0530
+
+    random fix
+
+[33mcommit 0ac9e5b0a8ab9f511b036298cb27d71622979dbc[m
+Merge: 05ac0df 358e13c
+Author: Arjit-ak <kambojarjit@gmail.com>
+Date:   Fri Jun 21 03:18:47 2024 +0530
+
+    search bar added + sidebar css added + searchbar css added
+
+[33mcommit 05ac0df573eab4a56b695e6f785503d72e529060[m
+Author: Arjit-ak <kambojarjit@gmail.com>
+Date:   Thu Jun 20 21:08:30 2024 +0530
+
+    Search bar added
+
+[33mcommit 358e13c26a580765a477ea6e99c21f79cb02966f[m
+Author: arihantjain-17 <arihantjaindec2003@gmail.com>
+Date:   Thu Jun 20 21:00:42 2024 +0530
+
+    doctor card added
+
+[33mcommit 0b4a62a9c01db26fbd49dc31db6686258a44b637[m
+Author: Ashutosh Kasudhan <ashukasaudhan971@gmail.com>
+Date:   Wed Jun 19 18:12:29 2024 +0530
+
+    Created README.md
+
+[33mcommit 2ce5b11531cb9f720d7a1f1436b23cbae9ad6532[m
+Merge: c708dcb 815eac2
+Author: Ashutosh Kasudhan <ashukasaudhan971@gmail.com>
+Date:   Wed Jun 19 18:04:06 2024 +0530
+
+    Merge pull request #2 from Ashu463/main
+    
+    Merging this PR as it doesn't have any conflicts
+
+[33mcommit 815eac2a37855f1ec07437687ec62c268a58a734[m
+Author: Ashu463 <ashukasaudhan971@gmail.com>
+Date:   Wed Jun 19 12:08:30 2024 +0530
+
+    BackEnd skeleton added along with MongoDB instance
+
+[33mcommit c708dcb69aa7f28c5d5b084f9c516cd7cf386ab0[m
+Author: arihantjain-17 <arihantjaindec2003@gmail.com>
+Date:   Mon Jun 17 10:15:35 2024 +0530
+
+    slidebar
+
+[33mcommit 7c81028285bab0b16e97112b50ecf06c8b98773f[m
+Merge: a4d504c 9ce1e0d
+Author: Arjit2412 <132834812+Arjit2412@users.noreply.github.com>
+Date:   Sun Jun 16 14:50:37 2024 +0530
+
+    Merge pull request #1 from Arjit2412/main
+    
+    app is changed
+
+[33mcommit 9ce1e0ddf6a59310c4a54d382b3c08f0f82f8f78[m
+Author: Arjit-ak <kambojarjit@gmail.com>
+Date:   Sun Jun 16 14:49:39 2024 +0530
+
+    app is changed
+
+[33mcommit a4d504c03a09093edf9dd63fda6f9e63ce17a1df[m
+Author: arihantjain-17 <arihantjaindec2003@gmail.com>
+Date:   Sun Jun 16 14:36:40 2024 +0530
+
+    Repo intialized

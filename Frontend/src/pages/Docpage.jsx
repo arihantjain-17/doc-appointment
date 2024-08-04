@@ -1,6 +1,6 @@
 import './Docpage.css'
 import { useParams } from 'react-router-dom';
-import doctors from '../data/Docdetail'; 
+// import doctors from '../data/Docdetail'; 
 import Calendar from '../components/DoctorPage/Calendar';
 import Navbar from '../components/Landingpage/Navbar'
 
@@ -13,7 +13,7 @@ const Docpage = () => {
 
   const getDoc = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/doctor", {});
+      const response = await axios.get("http://localhost:3000/api/v1/doctor", {});
       // console.log(response, " is the response")
       setDocArray(response.data.doctor);
     } catch (error) {

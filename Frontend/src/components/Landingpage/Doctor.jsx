@@ -3,7 +3,9 @@ import DocCard from './DocCard';
 import './Doctor.css';
 
 
-const Doctor = ({ doctors }) => {
+const Doctor = ({doctors}) => {
+  
+
   return (
     <div className="cards">
       {doctors.length > 0 ? (
@@ -13,6 +15,7 @@ const Doctor = ({ doctors }) => {
             ) : (
               <p>Loading doctors...</p>
             )}
+
     </div>
   ); 
 };

@@ -70,7 +70,7 @@ export default function PrimarySearchAppBar({ toggleSidebar }) {
 
   const getDoc = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/doctor", {});
+      const response = await axios.get("http://localhost:3000/api/v1/doctor", {});
       setData(response.data.doctor);
     } catch (error) {
       console.error("Error fetching doctors:", error);
@@ -281,7 +281,7 @@ export default function PrimarySearchAppBar({ toggleSidebar }) {
       
     </Box>
     <Box sx={{position:'relative'}}>
-      <div className="dropdown">
+      <div className="dropdown ">
             {data.filter(item => {
               const searchTerm = value.toLowerCase();
               const fullName = item.Name.toLowerCase();
