@@ -6,7 +6,7 @@ const DocCard = ({doctor}) => {
   return (
     <Link to={`/doctor/${doctor._id}`} className="doctor-card-link">
       <div className="doctor-card">
-        <img src={doctor.ImageLink} alt={doctor.Name} className="doctor-image" />
+        <img src={doctor.imageLink} alt={doctor.Name} className="doctor-image" />
         <h3 className="doctor-name">{doctor.Name}</h3>
         <div className="doctor-basic-info">
           <p className="doctor-speciality">{doctor.Speciality}</p>

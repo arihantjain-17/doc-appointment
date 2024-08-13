@@ -19,7 +19,9 @@ const Landingpage = () => {
   const getDoc = async () => {
     try {
       const response = await axios.get("http://localhost:3000/api/v1/doctor", {});
+
       setDocArray(response.data.doctor);
+      console.log(response.data);
     } catch (error) {
       console.error("Error fetching doctors:", error);
     }
