@@ -1,19 +1,18 @@
-const mongoose = require('mongoose')
-// Define mongoose schemas
+const mongoose = require('mongoose');
 
+// Define mongoose schema
 const doctorSchema = new mongoose.Schema({
-  Name: String,
-  Speciality: String,
-  Fees: Number,
-  imageLink: String,
-  Availablity: Boolean,
-  Hospital: String,
-  AvailabilityTimes: [{ day: String, startTime: String, endTime: String }], // e.g., { day: 'Monday', startTime: '09:00', endTime: '17:00' }
+  Name: { type: String, required: true },
+  Speciality: { type: String, required: true },
+  Fees: { type: Number, required: true },
+  imageLink: { type: String, required: true },
+  Availablity: { type: Boolean, default: false }, // default to false
+  Hospital: { type: String, required: true },
+  AvailabilityTimes: [{ day: String, startTime: String, endTime: String }],
+  password: { type: String, required: true }
 });
 
-
 const Doctor = mongoose.model('Doctor', doctorSchema);
+
+module.exports = Doctor;
   
-  module.exports = {
-    Doctor
-  } 

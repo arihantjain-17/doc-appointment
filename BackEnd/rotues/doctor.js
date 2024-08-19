@@ -1,15 +1,15 @@
 const express=require("express");
 const router=express.Router();
 
-const {doctordata,updateavailability}=require('../controller/doctordata');
+const {doctordata,updateavailability,data}=require('../controller/doctordata');
+
+router.get("/doctor",data );
+
+router.get("/doctor/:id",doctordata );
+
+router.put("/doctoravailability/:id",updateavailability);
 
 
 
-router.get("/doctor",doctordata );
 
-router.put("/doctor/:id",updateavailability);
-
-
-
-
-module.exports=router;
+module.exports=router; 

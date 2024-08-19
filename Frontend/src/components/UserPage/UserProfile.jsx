@@ -1,47 +1,66 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
-import './UserProfile.css';
+const Userprofile = () => {
+    const [user, setUser] = useState(null); 
+    const [appointments, setAppointments] = useState([]);
+    const { id: userId } = useParams();
 
-const UserProfile = ({ user }) => {
-  return (
-    <div className="user-profile">
-      <div className="profile-header">
-        <img src={user.profilePicture} alt={user.name} className="profile-picture" />
-        <h1>{user.name}</h1>
-        <p>{user.email}</p>
-        <p>{user.phone}</p>
-      </div>
+    useEffect(() => {
+        const fetchUserProfile = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                if (!token) {
+                    console.error('No token found');
+                    return;
+                }
 
-      <div className="profile-details">
-        <h2>Personal Information</h2>
-        <p><strong>Address:</strong> {user.address}</p>
+                const userResponse = await axios.get(`http://localhost:3000/api/v1/user/profile/${userId}`, {
+                    headers: { Authorization: `Bearer ${token}` }
+                });
+                setUser(userResponse.data);
 
-        <h2>Upcoming Appointments</h2>
-        <ul>
-          {user.upcomingAppointments.map(appointment => (
-            <li key={appointment.id}>
-              {appointment.date} with {appointment.doctor} ({appointment.specialty}) at {appointment.hospital}
-            </li>
-          ))}
-        </ul>
+                const appointmentsResponse = await axios.get(`http://localhost:3000/api/v1/user/${userId}/appointments`, {
+                    headers: { Authorization: `Bearer ${token}` }
+                });
+                setAppointments(appointmentsResponse.data);
+                
+            } catch (error) { 
+                console.error('Error fetching user profile or appointments:', error);
+            }
+        };
 
-        <h2>Past Appointments</h2>
-        <ul>
-          {user.pastAppointments.map(appointment => (
-            <li key={appointment.id}>
-              {appointment.date} with {appointment.doctor} ({appointment.specialty}) at {appointment.hospital}
-            </li>
-          ))}
-        </ul>
+        fetchUserProfile();
+        
+    }, [userId]);
 
-        <h2>Medical History</h2>
-        <ul>
-          {user.medicalHistory.map((record, index) => (
-            <li key={index}>{record}</li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
+    if (!user) return <div>Loading...</div>;
+
+    return (
+        <div className="profile-container">
+            <h2>User Profile</h2>
+            <p><strong>Username:</strong> {user.username}</p>
+            <p><strong>Email:</strong> {user.email}</p>
+            <p><strong>Address:</strong> {user.address}</p>
+
+            <h2>Your Appointments</h2>
+            {appointments.length > 0 ? (
+                <ul>
+                    {appointments.map((appointment) => (
+                        <li key={appointment._id}>
+                            <p><strong>Doctor:</strong> {appointment.doctorId}</p>
+                            <p><strong>Date:</strong> {new Date(appointment.date).toLocaleDateString()}</p>
+                            <p><strong>Time:</strong> {appointment.time}</p>
+                            <p><strong>Status:</strong> {appointment.status}</p>
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>No appointments found.</p>
+            )}
+        </div>
+    );
 };
 
-export default UserProfile;
+export default Userprofile;

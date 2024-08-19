@@ -60,7 +60,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function PrimarySearchAppBar({ toggleSidebar }) {
+export default function PrimarySearchAppBar({ toggleSidebar, userId }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -253,11 +253,11 @@ export default function PrimarySearchAppBar({ toggleSidebar }) {
               edge="end"
               aria-label="account of current user"
               aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
+              aria-haspopup="true" 
+              onClick={handleProfileMenuOpen} 
               color="inherit"
             >
-              <Link to='/profile'><AccountCircle /></Link>
+              <Link to={`/profile/${userId}`}><AccountCircle /></Link>
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>

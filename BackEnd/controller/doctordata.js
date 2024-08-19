@@ -1,18 +1,42 @@
-const {Doctor} = require('../models/doctordata');
+const Doctor = require('../models/doctordata');
 
-exports.doctordata=async (req, res) => {
-    // console.log("hello from the doctor's project");
-    const doc = await Doctor.find();
-    // console.log(doc);
-    if(!doc){
-        res.send(403).json({ message : 'this doctor does not exit'})
-    }
-    res.status(200).json({
-        message: 'Doctor found successfully',
-        doctor: doc
-    });
+
+//extracting all doctor data
+exports.data = async (req, res) => {
+try {
     
-}
+    const doctors = await Doctor.find().select('-password'); // Exclude the password field
+    
+    res.status(200).json({
+      message: 'Doctors fetched successfully',
+      doctor: doctors
+    });
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching doctor data', error });
+  }
+};
+ 
+
+
+exports.doctordata = async (req, res) => { 
+  
+  const { id } = req.params; // Get the doctor ID from the request parameters
+  
+  try {
+       
+      const doc = await Doctor.findById(id); // Find the doctor by ID
+      
+      if (!doc) {
+          return res.status(404).json({ message: 'Doctor not found' });
+      }
+      res.status(200).json({
+          message: 'Doctor found successfully',
+          doctor: doc
+      });
+  } catch (error) {
+      res.status(500).json({ message: 'Error fetching doctor data', error });
+  }
+};
 
 exports.updateavailability=async (req, res) => {
     try {

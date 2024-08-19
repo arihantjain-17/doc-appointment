@@ -28,9 +28,12 @@ const DoctorProfile = () => {
   // Function to fetch the doctor's data from the backend
   const fetchDoctorData = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/v1/doctor`); // Fetch all doctors
-      const foundDoctor = response.data.doctor.find(doc => doc._id === doctorId); // Find the doctor with the matching ID
+      const response = await axios.get(`http://localhost:3000/api/v1/doctor/${doctorId}`); // Fetch all doctors
+      const foundDoctor = response.data.doctor; // Find the doctor with the matching ID
+      
       setDoctor(foundDoctor); // Set the doctor data in state
+      
+
       const isAvailable = checkAvailability(foundDoctor.AvailabilityTimes); // Check if the doctor is available
       setAvailability(isAvailable); // Set the availability state
       setAvailabilityTimes(foundDoctor.AvailabilityTimes); // Set the availability times state
@@ -58,12 +61,15 @@ const DoctorProfile = () => {
       console.error("Error updating appointment status:", error); // Log any errors
     }
   };
+ 
 
+
+  
   // Function to handle the availability change when the doctor edits their availability
   const handleAvailabilityChange = async () => {
-    // console.log("Sending data:", { availability, availabilityTimes });
+    
     try {
-      await axios.put(`http://localhost:3000/api/v1/doctor/${doctorId}`, {
+      await axios.put(`http://localhost:3000/api/v1/doctoravailability/${doctorId}`, {
         Availablity: availability, // Send the updated availability status
         AvailabilityTimes: availabilityTimes, // Send the updated availability times
       });
@@ -83,6 +89,10 @@ const DoctorProfile = () => {
   // If the doctor data is not yet loaded, display a loading message
   if (!doctor) return <div>Loading...</div>;
 
+
+
+
+
   // Filter appointments based on the active tab (today's, pending, or history)
   const filteredAppointments = appointments.filter(appointment => {
     if (activeTab === 'today') {
@@ -99,7 +109,7 @@ const DoctorProfile = () => {
     <div className="doctor-profile-container">
       <div className="doctor-profile-info">
         <div className="doctor-profile-image-container">
-          <img src={doctor.imageLink} alt={doctor.Name} className="doctor-profile-image" /> {/* Display doctor's image */}
+          <img src={ `http://localhost:3000/${doctor.imageLink}` } alt={doctor.Name} className="doctor-profile-image" /> {/* Display doctor's image */}
         </div>
         <div className="doctor-profile-details">
           <h1 className="doctor-profile-name">{doctor.Name}</h1> {/* Display doctor's name */}
@@ -120,7 +130,7 @@ const DoctorProfile = () => {
                 Available {/* Checkbox to toggle availability */}
               </label>
               <h3>Set Availability Times:</h3>
-              {availabilityTimes.map((time, index) => (
+              {availabilityTimes.map((time, index) => ( 
                 <div key={index} className="availability-time">
                   <input 
                     type="text" 
@@ -197,3 +207,4 @@ const DoctorProfile = () => {
 };
 
 export default DoctorProfile;
+ 
