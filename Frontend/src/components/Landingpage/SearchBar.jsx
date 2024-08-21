@@ -38,13 +38,13 @@ function SearchBar() {
         <div className="dropdown">
           {data.filter(item => {
             const searchTerm = value.toLowerCase();
-            const fullName = item.title.toLowerCase();
+            const fullName = item.Name.toLowerCase();
 
             return searchTerm && fullName.startsWith(searchTerm) && fullName !== searchTerm;
           }).slice(0,10)
             .map((item) => 
             <div onClick={()=>(item.id)} className='dropdown-row'>
-              {item.title}
+              {item.Name}
             </div>)}
         </div>
       </div>

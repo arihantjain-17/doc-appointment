@@ -291,7 +291,7 @@ export default function PrimarySearchAppBar({ toggleSidebar, userId }) {
               .map((item) =>
                 <div key={item._id} onClick={() => onSearch(item.Name)} className='dropdown-row'>
                   
-                  <Link to={`/doctor/${item._id}`}>{item.Name}</Link>
+                  <Link to={`/doctor/${item._id}?userId=${userId}`}>{item.Name}</Link>
                 </div>)}
           </div>
     </Box>
