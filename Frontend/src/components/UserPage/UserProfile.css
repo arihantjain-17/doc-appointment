@@ -1,53 +1,113 @@
-.user-profile-container {
-  max-width: 600px;
-  margin: 40px auto;
+/* 3D Effect and Animation */
+@keyframes profileEntrance {
+  from {
+      transform: perspective(1000px) rotateX(90deg);
+      opacity: 0;
+  }
+  to {
+      transform: perspective(1000px) rotateX(0deg);
+      opacity: 1;
+  }
+}
+
+/* Container Styles */
+.userprofile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+  height: 100vh;
+  overflow: auto;
 }
 
-.user-profile-container h2 {
+.userprofile-title, 
+.userprofile-appointments-title {
+  font-size: 2rem;
+  color: #00796b;
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 28px;
-  color: #333333;
+  animation: profileEntrance 1s ease-out;
 }
 
-.user-profile-container p {
+/* Profile Details */
+.userprofile-detail {
+  font-size: 1.2rem;
+  color: #004d40;
   margin: 10px 0;
-  font-size: 18px;
-  color: #555555;
 }
 
-.user-profile-container h3 {
-  margin-top: 30px;
-  font-size: 24px;
-  color: #4CAF50;
-  border-bottom: 2px solid #4CAF50;
-  padding-bottom: 10px;
+.userprofile-detail strong {
+  color: #00796b;
 }
 
-.user-profile-container ul {
-  list-style-type: none;
+/* Appointments Section */
+.userprofile-appointments-list {
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.user-profile-container ul li {
-  margin-bottom: 20px;
+.userprofile-appointment-item {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   padding: 15px;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  transform: perspective(1000px) rotateX(0deg);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.user-profile-container ul li p {
-  margin: 5px 0;
-  font-size: 16px;
-  color: #666666;
+.userprofile-appointment-item:hover {
+  transform: perspective(1000px) rotateX(-5deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-.user-profile-container ul li p strong {
-  color: #333333;
+/* No Appointments Message */
+.userprofile-no-appointments {
+  font-size: 1.2rem;
+  color: #00796b;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .userprofile-title,
+  .userprofile-appointments-title {
+      font-size: 1.5rem;
+  }
+
+  .userprofile-detail {
+      font-size: 1rem;
+  }
+
+  .userprofile-appointment-item {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+
+  .userprofile-no-appointments {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .userprofile-title,
+  .userprofile-appointments-title {
+      font-size: 1.2rem;
+  }
+
+  .userprofile-detail {
+      font-size: 0.9rem;
+  }
+
+  .userprofile-appointment-item {
+      padding: 8px;
+      font-size: 0.8rem;
+  }
+
+  .userprofile-no-appointments {
+      font-size: 0.9rem;
+  }
 }

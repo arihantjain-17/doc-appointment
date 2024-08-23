@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import "./LoginPage.css"
+import "./LoginPage.css";
 
 const LoginPage = () => {
     const [username, setUsername] = useState('');
@@ -15,7 +15,7 @@ const LoginPage = () => {
                 username,
                 password,
             });
-            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('token', response.data.token); 
             navigate(`/user/${response.data.userId}`);
         } catch (error) {
             console.error('Error logging in:', error);
@@ -23,22 +23,24 @@ const LoginPage = () => {
     };
 
     return (
-        <div className="login-container">
-            <form onSubmit={handleLogin}> 
-                <h2>Login</h2>
+        <div className="login-page-container">
+            <form className="login-form" onSubmit={handleLogin}>
+                <h2 className="login-form-title">Login</h2>
                 <input
+                    className="login-input"
                     type="text"
                     placeholder="Username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                 />
                 <input
+                    className="login-input"
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <button type="submit">Login</button>
+                <button className="login-button" type="submit">Login</button>
             </form>
         </div>
     );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import './UserProfile.css'; // Ensure you have a corresponding CSS file
 
 const Userprofile = () => {
     const [user, setUser] = useState(null); 
@@ -35,20 +36,20 @@ const Userprofile = () => {
         
     }, [userId]);
 
-    if (!user) return <div>Loading...</div>;
+    if (!user) return <div className="userprofile-loading">Loading...</div>;
 
     return (
-        <div className="profile-container">
-            <h2>User Profile</h2>
-            <p><strong>Username:</strong> {user.username}</p>
-            <p><strong>Email:</strong> {user.email}</p>
-            <p><strong>Address:</strong> {user.address}</p>
+        <div className="userprofile-container">
+            <h2 className="userprofile-title">User Profile</h2>
+            <p className="userprofile-detail"><strong>Username:</strong> {user.username}</p>
+            <p className="userprofile-detail"><strong>Email:</strong> {user.email}</p>
+            <p className="userprofile-detail"><strong>Address:</strong> {user.address}</p>
 
-            <h2>Your Appointments</h2>
+            <h2 className="userprofile-appointments-title">Your Appointments</h2>
             {appointments.length > 0 ? (
-                <ul>
+                <ul className="userprofile-appointments-list">
                     {appointments.map((appointment) => (
-                        <li key={appointment._id}>
+                        <li key={appointment._id} className="userprofile-appointment-item">
                             <p><strong>Doctor:</strong> {appointment.doctorId}</p>
                             <p><strong>Date:</strong> {new Date(appointment.date).toLocaleDateString()}</p>
                             <p><strong>Time:</strong> {appointment.time}</p>
@@ -57,7 +58,7 @@ const Userprofile = () => {
                     ))}
                 </ul>
             ) : (
-                <p>No appointments found.</p>
+                <p className="userprofile-no-appointments">No appointments found.</p>
             )}
         </div>
     );

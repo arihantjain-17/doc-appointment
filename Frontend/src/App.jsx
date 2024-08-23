@@ -3,12 +3,13 @@ import { BrowserRouter , Route, Routes } from 'react-router-dom';
 
 import Landingpage from "./pages/Landingpage"
 import Docpage from './pages/Docpage';
-import Userprofile from './pages/Userprofile'
+import Userprofile from './pages/UserProfile'
 import DoctorProfile from './pages/DoctorProfile';
 import SignupPage from './pages/SignupPage'
 import LoginPage from './pages/LoginPage'
 import DoctorSignupPage from './pages/DoctorSignupPage';
 import DoctorLoginPage from './pages/DoctorLoginPage';
+import Homepage from './pages/Homepage'
 function App() {
   
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/signup" element={<SignupPage/>}/>
         <Route path="/doctor/signup" element={<DoctorSignupPage />} />
         <Route path="/doctor/login" element={<DoctorLoginPage />} />
+        <Route path="/" element={<Homepage />} />
       </Routes>
     </BrowserRouter>
   )

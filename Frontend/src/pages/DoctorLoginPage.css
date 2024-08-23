@@ -11,7 +11,7 @@
 }
 
 /* Container Styles */
-.signup-page-container {
+.doctor-login-page-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@
     padding: 20px;
 }
 
-.signup-form {
+.doctor-login-form {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -31,7 +31,7 @@
 }
 
 /* Form Title */
-.signup-form-title {
+.doctor-login-form-title {
     font-size: 2rem;
     color: #00796b;
     margin-bottom: 20px;
@@ -39,7 +39,7 @@
 }
 
 /* Input Styles */
-.signup-input {
+.doctor-login-input {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
@@ -49,14 +49,14 @@
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.signup-input:focus {
+.doctor-login-input:focus {
     border-color: #00796b;
     box-shadow: 0 0 8px rgba(0, 121, 107, 0.5);
     outline: none;
 }
 
 /* Button Styles */
-.signup-button {
+.doctor-login-button {
     width: 100%;
     padding: 15px;
     border: none;
@@ -68,48 +68,48 @@
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.signup-button:hover {
+.doctor-login-button:hover {
     background-color: #004d40;
     transform: scale(1.05);
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .signup-form {
+    .doctor-login-form {
         padding: 20px;
         width: 90%;
     }
 
-    .signup-form-title {
+    .doctor-login-form-title {
         font-size: 1.5rem;
     }
 
-    .signup-input {
+    .doctor-login-input {
         padding: 10px;
         font-size: 0.9rem;
     }
 
-    .signup-button {
+    .doctor-login-button {
         padding: 12px;
         font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .signup-form {
+    .doctor-login-form {
         padding: 15px;
     }
 
-    .signup-form-title {
+    .doctor-login-form-title {
         font-size: 1.3rem;
     }
 
-    .signup-input {
+    .doctor-login-input {
         padding: 8px;
         font-size: 0.8rem;
     }
 
-    .signup-button {
+    .doctor-login-button {
         padding: 10px;
         font-size: 0.9rem;
     }

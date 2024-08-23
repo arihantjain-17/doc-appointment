@@ -1,0 +1,183 @@
+/* 3D Effect and Animation */
+@keyframes formEntrance {
+    from {
+        transform: perspective(1000px) rotateX(90deg);
+        opacity: 0;
+    }
+    to {
+        transform: perspective(1000px) rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+/* Container Styles */
+.doctor-signup-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+    padding: 20px;
+}
+
+.doctor-signup-form {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    animation: formEntrance 1s ease-out;
+}
+
+/* Form Title */
+.doctor-signup-form-title {
+    font-size: 2rem;
+    color: #00796b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Input Styles */
+.doctor-signup-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.doctor-signup-input:focus {
+    border-color: #00796b;
+    box-shadow: 0 0 8px rgba(0, 121, 107, 0.5);
+    outline: none;
+}
+
+/* File Input */
+.doctor-signup-input[type="file"] {
+    padding: 0;
+    border: none;
+}
+
+/* Time Input */
+.doctor-signup-time-input {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Select Input */
+.doctor-signup-select {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Availability Times Section */
+.doctor-signup-availability-title {
+    font-size: 1.5rem;
+    color: #00796b;
+    margin-bottom: 15px;
+}
+
+/* Time Slot Container */
+.doctor-signup-availability-slot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Add Time Slot Button */
+.doctor-signup-add-time-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #00796b;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.doctor-signup-add-time-button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+/* Submit Button */
+.doctor-signup-submit-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #00796b;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.doctor-signup-submit-button:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .doctor-signup-form {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .doctor-signup-form-title {
+        font-size: 1.5rem;
+    }
+
+    .doctor-signup-input,
+    .doctor-signup-time-input,
+    .doctor-signup-select {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .doctor-signup-add-time-button,
+    .doctor-signup-submit-button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .doctor-signup-form {
+        padding: 15px;
+    }
+
+    .doctor-signup-form-title {
+        font-size: 1.3rem;
+    }
+
+    .doctor-signup-input,
+    .doctor-signup-time-input,
+    .doctor-signup-select {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .doctor-signup-add-time-button,
+    .doctor-signup-submit-button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
