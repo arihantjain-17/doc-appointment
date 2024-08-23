@@ -13,7 +13,7 @@ const SignupPage = () => {
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:3000/api/v1/user/signup', {
+            await axios.post('https://doc-appointment-backend.vercel.app/api/v1/user/signup', {
                 username,
                 password,
                 email,

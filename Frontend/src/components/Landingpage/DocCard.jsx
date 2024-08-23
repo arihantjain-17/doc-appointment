@@ -24,7 +24,7 @@ const DocCard = ({ doctor, userId }) => {
   return (
     <Link to={`/doctor/${doctor._id}?userId=${userId}`} className="doctor-card-link">
       <div className="doctor-card">
-        <img src={`http://localhost:3000/${doctor.imageLink}`} alt={doctor.Name} className="doctor-image" />
+        <img src={`https://doc-appointment-backend.vercel.app/${doctor.imageLink}`} alt={doctor.Name} className="doctor-image" />
         <h3 className="doctor-name">{doctor.Name}</h3>
         <div className="doctor-basic-info">
           <p className="doctor-speciality">{doctor.Speciality}</p>

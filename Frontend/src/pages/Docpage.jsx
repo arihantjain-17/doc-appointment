@@ -17,7 +17,7 @@ const Docpage = () => {
   useEffect(() => {
     const getDoc = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/v1/doctor");
+        const response = await axios.get("https://doc-appointment-backend.vercel.app/api/v1/doctor");
         setDocArray(response.data.doctor);
       } catch (error) {
         console.error("Error fetching doctors:", error);
@@ -32,7 +32,7 @@ const Docpage = () => {
           return;
         }
 
-        const response = await axios.get(`http://localhost:3000/api/v1/user/profile/${userId}`, {
+        const response = await axios.get(`https://doc-appointment-backend.vercel.app/api/v1/user/profile/${userId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setUserData(response.data); // Assuming the user data is in `response.data.user`
@@ -78,7 +78,7 @@ const Docpage = () => {
       <Navbar />
       <div className="doctor-detail-container">
         <div className="doctor-image-container">
-          <img src={`http://localhost:3000/${doctor.imageLink}`} alt={doctor.Name} className="doctor-detail-image" />
+          <img src={`https://doc-appointment-backend.vercel.app/${doctor.imageLink}`} alt={doctor.Name} className="doctor-detail-image" />
         </div>
         <div className="doctor-info-container">
           <h1 className="doctor-detail-name">{doctor.Name}</h1>

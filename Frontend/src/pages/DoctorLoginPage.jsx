@@ -11,7 +11,7 @@ const DoctorLoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/v1/doctors/login', {
+      const response = await axios.post('https://doc-appointment-backend.vercel.app/api/v1/doctors/login', {
         Name,
         password,
       });

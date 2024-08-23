@@ -39,7 +39,7 @@ const Calendar = ({ doctorId, patientName, isAvailable }) => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/appointment", {
+      const response = await axios.post("https://doc-appointment-backend.vercel.app/api/v1/appointment", {
         doctorId,
         patientName,
         date: selectedDate,

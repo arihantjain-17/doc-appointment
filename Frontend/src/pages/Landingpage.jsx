@@ -18,7 +18,7 @@ const Landingpage = () => {
 
   const getDoc = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/v1/doctor", {});
+      const response = await axios.get("https://doc-appointment-backend.vercel.app/api/v1/doctor", {});
 
       setDocArray(response.data.doctor);
       

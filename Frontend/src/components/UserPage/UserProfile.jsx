@@ -17,12 +17,12 @@ const Userprofile = () => {
                     return;
                 }
 
-                const userResponse = await axios.get(`http://localhost:3000/api/v1/user/profile/${userId}`, {
+                const userResponse = await axios.get(`https://doc-appointment-backend.vercel.app/api/v1/user/profile/${userId}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setUser(userResponse.data);
 
-                const appointmentsResponse = await axios.get(`http://localhost:3000/api/v1/user/${userId}/appointments`, {
+                const appointmentsResponse = await axios.get(`https://doc-appointment-backend.vercel.app/api/v1/user/${userId}/appointments`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setAppointments(appointmentsResponse.data);

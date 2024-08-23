@@ -49,7 +49,7 @@ const DoctorSignupPage = () => {
     });
 
     try {
-      await axios.post('http://localhost:3000/api/v1/doctors/signup', data);
+      await axios.post('https://doc-appointment-backend.vercel.app/api/v1/doctors/signup', data);
       navigate('/doctor/login');
     } catch (error) {
       console.error('Error signing up doctor:', error);

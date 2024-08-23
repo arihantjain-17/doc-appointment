@@ -28,7 +28,7 @@ const DoctorProfile = () => {
   // Function to fetch the doctor's data from the backend
   const fetchDoctorData = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/v1/doctor/${doctorId}`); // Fetch all doctors
+      const response = await axios.get(`https://doc-appointment-backend.vercel.app/api/v1/doctor/${doctorId}`); // Fetch all doctors
       const foundDoctor = response.data.doctor; // Find the doctor with the matching ID
       
       setDoctor(foundDoctor); // Set the doctor data in state
@@ -45,7 +45,7 @@ const DoctorProfile = () => {
   // Function to fetch the appointments for the doctor
   const fetchAppointments = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/v1/appointments/${doctorId}`); // Fetch appointments for the doctor
+      const response = await axios.get(`https://doc-appointment-backend.vercel.app/api/v1/appointments/${doctorId}`); // Fetch appointments for the doctor
       setAppointments(response.data.appointments); // Set the appointments state
     } catch (error) {
       console.error("Error fetching appointments:", error); // Log any errors
@@ -55,7 +55,7 @@ const DoctorProfile = () => {
   // Function to update the status of an appointment (Accept/Decline)
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
-      await axios.put(`http://localhost:3000/api/v1/appointment/${appointmentId}`, { status }); // Update the appointment status
+      await axios.put(`https://doc-appointment-backend.vercel.app/api/v1/appointment/${appointmentId}`, { status }); // Update the appointment status
       fetchAppointments(); // Refresh the appointments after update
     } catch (error) {
       console.error("Error updating appointment status:", error); // Log any errors
@@ -69,7 +69,7 @@ const DoctorProfile = () => {
   const handleAvailabilityChange = async () => {
     
     try {
-      await axios.put(`http://localhost:3000/api/v1/doctoravailability/${doctorId}`, {
+      await axios.put(`https://doc-appointment-backend.vercel.app/api/v1/doctoravailability/${doctorId}`, {
         Availablity: availability, // Send the updated availability status
         AvailabilityTimes: availabilityTimes, // Send the updated availability times
       });
@@ -109,7 +109,7 @@ const DoctorProfile = () => {
     <div className="doctor-profile-container">
       <div className="doctor-profile-info">
         <div className="doctor-profile-image-container">
-          <img src={ `http://localhost:3000/${doctor.imageLink}` } alt={doctor.Name} className="doctor-profile-image" /> {/* Display doctor's image */}
+          <img src={ `https://doc-appointment-backend.vercel.app/${doctor.imageLink}` } alt={doctor.Name} className="doctor-profile-image" /> {/* Display doctor's image */}
         </div>
         <div className="doctor-profile-details">
           <h1 className="doctor-profile-name">{doctor.Name}</h1> {/* Display doctor's name */}
